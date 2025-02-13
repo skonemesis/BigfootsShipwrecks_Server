@@ -1,6 +1,26 @@
 /*
- * This file is subject to the terms and conditions defined in
- * file 'LICENSE.txt', which is part of this source code package.
+ * Bigfoot's Shipwrecks - Initialization Script
+ * Updated by: sko & Ghost PGM DEV TEAM
+ * 
+ * This script initializes the shipwreck spawning system, ensuring that 
+ * wrecks and loot crates appear at random ocean locations on server start.
+ * 
+ * Key Features:
+ * - Spawns configurable shipwrecks with loot crates.
+ * - Places markers on wreck locations.
+ * - Monitors shipwreck areas for player interactions.
+ * - Notifies all players when a crate has been claimed.
+ *
+ * Configurable Variables (Defined in config.sqf):
+ * - BS_count_shipwrecks: Number of shipwreck events.
+ * - BS_locations_center: Center position for shipwreck spawning.
+ * - BS_locations_distance_min: Minimum distance from center.
+ * - BS_locations_distance_max: Maximum distance from center.
+ * - BS_class_wreckage: Types of shipwreck objects to spawn.
+ * - BS_class_crate: Types of loot crates to spawn.
+ * - BS_loot_itemCargo: Loot items available in crates.
+ * - BS_loot_count_poptabs_seed: Randomized poptab distribution.
+ * - BS_debug_logCrateFill: Enables logging of loot contents.
  */
 
 if (!isServer) exitWith {};
@@ -24,7 +44,7 @@ if (!isServer) exitWith {};
 ] call ExileServer_BigfootsShipwrecks_spawnShipwrecksCommand;
 
 // Handles marker cleanup and player detection
-uiSleep 15; // TODO: is this needed?
+uiSleep 5; // TODO: is 15 really needed?
 [
     10, 
     ExileServer_BigfootsShipwrecks_maintainShipwrecksCommand, 
