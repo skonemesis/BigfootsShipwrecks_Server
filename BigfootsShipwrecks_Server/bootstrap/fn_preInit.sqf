@@ -1,8 +1,12 @@
 /*
- * This file is subject to the terms and conditions defined in
- * file 'LICENSE.txt', which is part of this source code package.
+ * preInit.sqf - Bigfoot's Shipwrecks
+ * 
+ * This script pre-compiles core functions before the mission starts.
+ * Ensures all server functions are loaded into the mission namespace.
+ * 
+ * Updated by: sko & Ghost PGM DEV TEAM
  */
- 
+
 private["_code"];
 
 {
