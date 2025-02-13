@@ -1,6 +1,12 @@
 /*
- * This file is subject to the terms and conditions defined in
- * file 'LICENSE.txt', which is part of this source code package.
+ * ExileServer_BigfootsShipwrecks_getWreckIdForSpawnCountIndexQuery.sqf
+ *
+ * Generates a unique marker ID for each shipwreck spawn based on its index.
+ * 
+ * Updated by: sko & Ghost PGM DEV TEAM
  */
- 
-format ["BigfootsShipwrecks_wreck_%1", _this];
+
+private["_wreckIndex"];
+
+_wreckIndex = _this;
+format ["BigfootsShipwrecks_wreck_%1", _wreckIndex];
