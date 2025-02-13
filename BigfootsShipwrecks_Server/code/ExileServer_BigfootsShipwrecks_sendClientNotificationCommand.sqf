@@ -1,11 +1,22 @@
+/*
+ * ExileServer_BigfootsShipwrecks_sendClientNotificationCommand.sqf
+ *
+ * Sends a notification message to the client via Exile's notification system.
+ * 
+ * Updated by: sko & Ghost PGM DEV TEAM
+ */
+
 if (!isServer) exitWith {};
 
-private ["_message", "_toastType"];
+// Extract parameters passed into the function
+private ["_messageType", "_title", "_message"];
+_messageType = _this select 0;    // Notification type (e.g., "Info", "Warning", "Error")
+_title = _this select 1;          // Notification title
+_message = _this select 2;        // Notification body message
 
-_type = _this select 0;
-_title = _this select 1;
-_message = _this select 2;
-
-_toastType = format ["%1TitleAndText", _type];
-
-["toastRequest", [_toastType, [_title,_message]]] call ExileServer_system_network_send_broadcast; 
+// Ensure the message is valid before sending
+if (!isNil "_message" && { _message != "" }) then
+{
+    // Send notification to all players
+    ["toastRequest", [_messageType, _title, _message]] call ExileServer_system_network_send_broadcast;
+};
