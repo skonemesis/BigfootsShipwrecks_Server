@@ -10,11 +10,16 @@
  * - Monitors active shipwreck locations.
  * - Removes markers when players approach the crate.
  * - Sends global notifications when a crate is found.
+ * - Standardized variable naming to match BS_count_shipwrecks from config.sqf
+ * - Ensured marker existence check before retrieving position
+ * - Added structured comments for clarity
+ * - 
  *
  * Configurable Variables (Defined in config.sqf):
- * - BS_count_shipwrecks: Number of shipwrecks to track.
- * - BS_player_showCrateClaimMessageRadius: Distance at which a crate is detected.
- * - BS_player_showCrateClaimMessage: Enables/disables global notifications.
+ * - BS_count_shipwrecks: Number of shipwrecks to track
+ * - BS_player_showCrateClaimMessageRadius: Distance at which a crate is detected
+ * - BS_player_showCrateClaimMessage: Enables/disables global notifications
+ * - Improved logging to help track crate recoveries
  */
 
 if (!isServer) exitWith {};
