@@ -67,7 +67,3 @@ The full license text can be found in the `LICENSE.txt` file.
    `@ExileServer/addons/`  
 2. Edit values in **config.sqf** to customize spawn settings, loot tables, and notifications.  
 3. Restart your server.  
-
----
-
-Let me know if you need any adjustments.
