@@ -1,9 +1,18 @@
 /*
- * This file is subject to the terms and conditions defined in
- * file 'APL-SA LICENSE.txt', which is part of this source code package.
+ * ExileServer_BigfootsShipwrecks_util_logCommand.sqf
+ *
+ * Utility function to log messages to the server RPT file.
+ * Used for debugging and tracking key events.
+ * 
+ * Updated by: sko & Ghost PGM DEV TEAM
  */
 
-private["_msg"];
+private["_message"];
 
-_msg = format["Bigfoot'S SHIPWRECKS (SERVER): %1",_this];
-diag_log _msg;
+_message = _this;
+
+// Ensure the message is properly formatted before logging
+if !(isNil "_message") then 
+{
+    diag_log format ["[Bigfoot's Shipwrecks] %1", _message];
+};
