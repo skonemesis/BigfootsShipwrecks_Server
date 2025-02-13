@@ -1,0 +1,4 @@
+//<'BigfootsMODIFIEDShipwrecks.pbo' properties via Mikero's dos tools, dll version 9.89>
+prefix=BigfootsShipwrecks_Server;
+//PboType=Arma Addon;
+//</properties>
